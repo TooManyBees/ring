@@ -19,7 +19,7 @@
 {% else %}
   {% assign next = site.websites | sort: 'date' | first %}
 {% endif %}
-  <p class="badge"><strong>{{page.title}}</strong> is a member of the {{site.title}} webring</p>
+  <p class="badge"><span class="site-name">{{page.title}}</span> is a member of the <span class="webring-name">{{site.title}}</span> webring</p>
   <div class="links">
     <a class="link previous" href="{{prev.uri}}" title="{{prev.title}}: {{prev.desc}}" rel="noopener external" target="_parent">
       Previous

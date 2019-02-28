@@ -10,11 +10,26 @@ body {
 
 .links {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .link{
   margin: 10px;
   padding: 10px;
   border: 4px double #00ff00;
+  color: #00ff00;
+}
+
+.link:visited {
+  border-color: #398a17;
+  color: #398a17;
+}
+
+.site-name {
+  font-style: italic;
+}
+
+.webring-name {
+  font-style: italic;
 }

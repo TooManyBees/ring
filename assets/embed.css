@@ -10,7 +10,8 @@ body {
 
 .links {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
 
 .link{
@@ -21,4 +22,12 @@ body {
   border-top-color: #ba94c7;
   background-color: #753988;
   color: white;
+}
+
+.site-name {
+  font-weight: bold;
+}
+
+.webring-name {
+  font-weight: bold;
 }
