@@ -1,0 +1,20 @@
+body {
+  background-color: transparent;
+  margin: 0;
+  padding: 5px;
+}
+
+.badge {
+  text-align: center;
+}
+
+.links {
+  display: flex;
+  justify-content: space-between;
+}
+
+.link{
+  margin: 10px;
+  padding: 10px;
+  border: 4px double #00ff00;
+}

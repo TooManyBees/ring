@@ -1,0 +1,26 @@
+{% if page.previous %}
+  {% assign prev = page.previous %}
+{% else %}
+  {% assign prev = site.websites | sort: 'date' | last %}
+{% endif %}
+{% if page.next %}
+  {% assign next = page.next %}
+{% else %}
+  {% assign next = site.websites | sort: 'date' | first %}
+{% endif %}
+{
+  "next": {
+    "uri": {{next.uri | jsonify}},
+    "title": {{next.title | jsonify}},
+    "desc": {{next.desc | jsonify}}
+  },
+  "prev": {
+    "uri": {{prev.uri | jsonify}},
+    "title": {{prev.title | jsonify}},
+    "desc": {{prev.desc | jsonify}}
+  },
+  "all": {
+    "json": "{{site.url}}{{site.baseurl}}/sites.json",
+    "html": "{{site.url}}{{site.baseurl}}/sites.html"
+  }
+}

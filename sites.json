@@ -1,0 +1,10 @@
+---
+---
+{% assign websites = site.websites | sort: 'date' %}
+[{% for website in websites %}
+  {
+    "uri": "{{website.uri}}",
+    "title": "{{website.title}}",
+    "desc": "{{website.desc}}"
+  }{% unless forloop.last %},{% endunless %}{% endfor %}
+]

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>{{site.title}}</title>
+  <base href="{{site.baseurl}}/">
+  <meta name="site-uri" content="{{page.uri}}">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src *;">
+  <link id="default-style" rel="stylesheet" type="text/css" href="assets/embed.css">
+  <script type="text/javascript" src="assets/embed.js"></script>
+</head>
+<body>
+{% if page.previous %}
+  {% assign prev = page.previous %}
+{% else %}
+  {% assign prev = site.websites | sort: 'date' | last %}
+{% endif %}
+{% if page.next %}
+  {% assign next = page.next %}
+{% else %}
+  {% assign next = site.websites | sort: 'date' | first %}
+{% endif %}
+  <p class="badge"><strong>{{page.title}}</strong> is a member of the {{site.title}} webring</p>
+  <div class="links">
+    <a class="link previous" href="{{prev.uri}}" title="{{prev.title}}: {{prev.desc}}" rel="noopener external" target="_parent">
+      Previous
+    </a>
+    <a class="link next" href="{{next.uri}}" title="{{next.title}}: {{next.desc}}" rel="noopener external" target="_parent">
+      Next
+    </a>
+    <a class="link random" href="#">Random</a>
+    <a class="link all" href="sites" rel="noopener external" target="_parent">Site List</a>
+  </div>
+</body>
+</html>
