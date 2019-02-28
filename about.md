@@ -27,9 +27,9 @@ where `date` is the day you're making the new file request. Be careful not to mi
 Each member site gets an embed page generated for them. After your pull request is approved and merged, add the embed to your site with the markup:
 
 ```
-<iframe src="{{site.url}}{{site.baseurl}}/sites/toomanybees">
+<iframe src="{{'/sites/toomanybees' | absolute_url}}">
 </iframe>
-<script src="{{site.url}}{{site.baseurl}}/assets/parent.js"></script>
+<script src="{{'/assets/parent.js' | absolute_url }}"></script>
 ```
 
 replacing `toomanybees` with the name of the file you added. The `parent.js` script is unnecessary if you plan to size the iframe appropriately. It'll look like this:
@@ -39,24 +39,24 @@ replacing `toomanybees` with the name of the file you added. The `parent.js` scr
     border: none;
   }
 </style>
-<iframe src="{{site.url}}{{site.baseurl}}/sites/toomanybees">
+<iframe src="{{'/sites/toomanybees' | absolute_url}}">
 </iframe>
-<script src="{{site.url}}{{site.baseurl}}/assets/parent.js"></script>
+<script src="{{'/assets/parent.js' | absolute_url}}"></script>
 
 # Custom CSS
 
 If lavender isn't your thing, use your own css by appending the `stylesheet` query string param to the iframe's src attribute.
 
 ```
-<iframe src="{{site.url}}{{site.baseurl}}/sites/toomanybees?stylesheet={{site.url}}{{site.baseurl}}/assets/alternate-embed.css">
+<iframe src="{{'/sites/toomanybees' | absolute_url}}?stylesheet={{'/assets/alternate-embed.css' | absolute_url}}">
 </iframe>
-<script src="{{site.url}}{{site.baseurl}}/assets/parent.js"></script>
+<script src="{{'/assets/parent.js' | absolute_url}}"></script>
 ```
 
-<iframe src="{{site.url}}{{site.baseurl}}/sites/toomanybees?stylesheet={{site.url}}{{site.baseurl}}/assets/alternate-embed.css">
+<iframe src="{{'/sites/toomanybees' | absolute_url}}?stylesheet={{'/assets/alternate-embed.css' | absolute_url}}">
 </iframe>
-<script src="{{site.url}}{{site.baseurl}}/assets/parent.js"></script>
+<script src="{{'/assets/parent.js' | absolute_url}}"></script>
 
 # Manual Implementations
 
-The list of all member sites is available in JSON at the page [sites.json]({{site.url}}{{site.baseurl}}/sites.json), for sites that would rather construct their embeds themselves.
+The list of all member sites is available in JSON at the page [sites.json]({{"/sites.json" | absolute_url}}), for sites that would rather construct their embeds themselves.

@@ -2,11 +2,10 @@
 <html>
 <head>
   <title>{{site.title}}</title>
-  <base href="{{site.baseurl}}/">
   <meta name="site-uri" content="{{page.uri}}">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src *;">
-  <link id="default-style" rel="stylesheet" type="text/css" href="assets/embed.css">
-  <script type="text/javascript" src="assets/embed.js"></script>
+  <link id="default-style" rel="stylesheet" type="text/css" href="{{'assets/embed.css' | relative_url}}">
+  <script type="text/javascript" src="{{'assets/embed.js' | relative_url}}"></script>
 </head>
 <body>
 {% if page.previous %}
@@ -28,7 +27,7 @@
       Next
     </a>
     <a class="link random" href="#">Random</a>
-    <a class="link all" href="sites" rel="noopener external" target="_parent">Site List</a>
+    <a class="link all" href="{{'/sites' | relative_url}}" rel="noopener external" target="_parent">Site List</a>
   </div>
 </body>
 </html>
