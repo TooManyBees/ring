@@ -32,7 +32,7 @@ Each member site gets an embed page generated for them. After your pull request 
 <script src="{{site.url}}{{site.baseurl}}/assets/parent.js"></script>
 ```
 
-replacing `toomanybees` with the name of the file you added. It'll look like this:
+replacing `toomanybees` with the name of the file you added. The `parent.js` script is unnecessary if you plan to size the iframe appropriately. It'll look like this:
 
 <style type="text/css">
   iframe {
