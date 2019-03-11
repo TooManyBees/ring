@@ -12,7 +12,16 @@
       }
     }
   });
-  setTimeout(function() {
+  function debounce(f) {
+    let timeout;
+    return function() {
+      clearTimeout(timeout);
+      timeout = setTimeout(f, 500);
+    }
+  }
+  const debouncedPost = debounce(() => {
     frame.contentWindow.postMessage("howTallAreYou", "{{site.url}}");
-  }, 500);
+  });
+  debouncedPost();
+  window.addEventListener("resize", debouncedPost);
 })();

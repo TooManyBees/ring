@@ -2,10 +2,10 @@
 layout: default
 ---
 
-Welcome to {{site.title}} webring.
+Welcome to {{site.title}} webring: presently a tech demo for a webring hosted on GitHub pages.
 
-See the [About]({{"/about" | relative_url}}) page to learn how to join and use this webring, or browse the entire [member site list]({{"/sites" | relative_url}}).
+Here are the [list of member sites]({{'/sites' | relative_url}}).
 
-# Create your own
+Here's how to [submit a new site]({{'/about#to-join' | relative_url}}) to this webring.
 
-This particular webring sucks. It's just two personal sites and my GitHub profile! To make a real one that isn't just a tech demo, fork [this repo]({{site.repository}}), customize `_config.yml`, replace `_websites` with your own list of sites, then enable GitHub pages on your fork!
+To create your own, fork [this repo]({{site.repository}}), customize `_config.yml`, clobber any existing files in `_websites` with your own list of sites, then enable GitHub pages on your fork!
